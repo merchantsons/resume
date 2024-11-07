@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+<!-- DEFAULT PHOTO SCRIPT -->
+<script>
+    window.onload = function() {
+        // Check if a file has been selected before and set the default image
+        const photoInput = document.getElementById('photoUpload');
+        const photoImage = document.getElementById('photoImage');
+        
+        // Set the default image on page load
+        photoImage.src = 'pic1.jpg';
+    
+        // Event listener for when the user selects a new image
+        photoInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    photoImage.src = e.target.result; // Set the new image
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    };
+</script> 
+<!-- DEFAULT PHOTO SCRIPT END -->
+
+</head>
+
+<body class="body" style="background-color:#444740">
+    <div class="page">
+        <div id="left" class="left">
+            <div class="photo" id="photo">
+                <img src="pic1.jpg" id="photoImage" alt="Profile Photo" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <input type="file" id="photoUpload" accept="image/*" />
+
+            <div class="sectionleft" id="sectionCurricular">
+                <div class="section-title ruled rule-above">
+                    <hr class="hrtop">
+                    <h4>PERSONAL DETAILS</h4>
+                    <hr class="hrbottom">
+                </div>
+                <div style="font-size: 1.1vmin;">
+                    <u>DATE OF BIRTH</u><br /><input type="text" value="NOVEMBER 28TH 2002"><br /><br />
+                    <u>DRIVER'S LIC #</u><br /><input type="text" value="A2586-78423"><br /><br />
+                    <u>MARITAL STATUS</u><br /><input type="text" value="SINGLE"><br /><br />
+                    <u>NATIONALITY</u><br /><input type="text" value="UNITED STATES OF AMERICA"><br /><br />
+                    <u>ADDRESS</u><br /><input type="text" value="28/9 MAIN SLINGTON ROAD, FARLONTON, TX-852652"><br /><br />
+                    <u>LANDLINE NUMBER</u><br /><input type="text" value="1-525-456 65454"><br />
+                </div>
+            </div>
+
+            <div class="sectionleft" id="sectionlinks">
+                <div class="section-title ruled rule-above">
+                    <hr class="hrtop">
+                    <h4><strong>Links</strong></h4>
+                    <hr class="hrbottom">
+                </div>
+
+                <div style="font-size: 1.1vmin;">
+                    <div class="col-sm-6">
+                        <ul>
+                            <li><input type="text" value="GitHub://chrismcqu"></li>
+                            <li><input type="text" value="Linkedin://chrismcqu"></li>
+                            <li><input type="text" value="Medium://chrismcqu"></li>
+                            <li><input type="text" value="CodeChef://chrismcqu"></li>
+                            <li><input type="text" value="HackerRank://chrismcqu"></li>
+                            <li><input type="text" value="Web-Page://chrismcqu.github.io"></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="sectionleft" id="sectionCurricular">
+                <div class="section-title ruled rule-above">
+                    <hr class="hrtop">
+                    <h4><strong>Hobbies</strong></h4>
+                    <hr class="hrbottom">
+                </div>
+                <ul>
+                    <li><input type="text" value="PHOTOGRAPHY"></li>
+                    <li><input type="text" value="QUORA WRITING"></li>
+                    <li><input type="text" value="VIDEO EDITING"></li>
+                    <li><input type="text" value="WATCHING STANDUP COMEDY"></li>
+                </ul>
+            </div>
+
+            <div class="sectionleft" id="sectionInterest">
+                <div class="section-title ruled rule-above">
+                    <hr class="hrtop">
+                    <h4><strong>Fields of interest</strong></h4>
+                    <hr class="hrbottom">
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <ul>
+                            <li><input type="text" value="Advanced XYZ"></li>
+                            <li><input type="text" value="ABC design"></li>
+                            <li><input type="text" value="XYZ processing"></li>
+                            <li><input type="text" value="Robotics"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sectionleft" id="sectionFooterMessage">
+                <div class="section-title ruled rule-above">
+                    <hr class="hrtop">
+                    <h6>(References available on request)</h6>
+                </div>
+            </div>
+            <!-- SIGNATURE FOR RESUME			 -->
+            <input id='sign' type="text" style="font-size: 2vmin; margin-top: 20vmin; font-size: 1.5vmin; color:rgb(187, 187, 187); margin-left: .25vmin; width: 18vmin; margin-bottom: 1.5vmin;" value="Christopher Mcquarrie">
+            <div style="font-size: 2vmin; text-align: center; margin-left:1vmin; color: rgb(194, 194, 194);  border: 1px solid #eee;"></div>
+            <div style="font-size: 2vmin; text-align: center; margin-left:1vmin; color: rgb(194, 194, 194);">Singnature</div>
+            <!-- SIGNATURE FOR RESUME END HERE		 -->
+        </div>
+
+        <div class="right" id="right">
+            <div id="page" class="droid">
+                <div>
+                    <div>
+                        <div id="info" style="margin-top: -2vmin;">
+                            <p class="bigname"><input style="margin-bottom: 0vmin;" type="text"
+                                    value="Christopher Mcquarrie"></p>
+                        </div>
+                        <div id="contact" class="contact">
+                            <p>
+                                  |   <input type="text" value="chrismcqu@outlook.com">  |  
+                                <input type="text" value="+1 - 778 992 8876">  |   
+                                <input style="margin-bottom: 1vmin;" type="text" value="chrismcqu.com">   |
+                            </p>
+                            <div class="innercontact">
+                                  |   <span id="contactLink2" style="margin-left: .1vmin;"><input type="text"
+                                        value="Github://chrismcqu"></span>  |  
+                                <span id="contactLink1"><input type="text" value="Linkedln://chrismcqu"></span>  |   
+                                <span id="contactlink5"><input type="text" value="Youtube://chrismcqu"></span>   |
+                                <span id="contactlink6" style="margin-left: .5vmin;"><input type="text"
+                                        value="facebook://chrismcqu"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id="sectionEducation">
+                    <div class="section-title ruled rule-above">
+                        <hr class="hrtop">
+                        <h4><strong>Education</strong></h4>
+                        <hr class="hrbottom">
+                    </div>
+                    <div>
+                        <ul id="educationList">
+                            <li>
+                                <!-- <textarea style="text-align:left; width: 60vmin; height: 4vmin;"></textarea> -->
+                                   <li style="margin-bottom: 1vmin;"><b>Master of Science</b><br />in Computer Science Tech University, 2020
+                                    Relevant coursework: Advanced Algorithms, Machine Learning, Distributed Systems
+                                    Achievements: Graduated with Honors                                   
+                                   <button class="remove-education" onclick="removeEducation(this)">Remove</button>
+                                   </li>
+                                   <li><b>Bachelor of Science</b><br /> in Computer Science, University of Technology, 2018
+                                    Relevant coursework: Data Structures, Algorithms, Database Systems
+                                    Achievements: Dean's List 2016-2018
+                                   <button class="remove-education" onclick="removeEducation(this)">Remove</button>
+                                   </li>                                
+                            </li>
+                        </ul>
+                        <button onclick="addEducation()">Add Education</button>
+                    </div>
+                </div>
+
+                <div class="section" id="sectionExperience">
+                    <div class="section-title ruled rule-above">
+                        <hr class="hrtop">
+                        <h4><strong>Experience</strong></h4>
+                        <hr class="hrbottom">
+                    </div>
+                    <div>
+                        <ul id="experienceList">
+                            <li>
+                                <li style="margin-bottom: 1vmin;"><b>Full Stack Developer</b><br />Tech Solutions Inc. June 2019 – Present
+                                    Developed and maintained web applications using React, Node.js, and MongoDB
+                                    Collaborated with cross-functional teams to define, design, and ship new features
+                                    Improved application performance by optimizing code and implementing best practices
+                                     Key projects: Inventory Management System, Customer Portal.                                   
+                                   <button class="remove-education" onclick="removeEducation(this)">Remove</button>
+                                </li>
+
+                                <li><b>Software Engineer,</b><br />CodeWorks January 2018 – May 2019 Built scalable backend services
+                                       and APIs using Python and Django Worked on front-end interfaces with HTML, CSS, and JavaScript
+                                       Participated in code reviews and pair programming sessions                                   
+                                   <button class="remove-education" onclick="removeEducation(this)">Remove</button>
+                                </li>
+                            </li>
+                        </ul>
+                        <button onclick="addExperience()">Add Experience</button>
+                    </div>
+                </div>
+
+                <div class="section" id="sectionPublications">
+                    <div class="section-title ruled rule-above">
+                        <hr class="hrtop">
+                        <h4><strong>Publications</strong></h4>
+                        <hr class="hrbottom">
+                    </div>
+                    <div>
+                        <ul id="publicationList">
+                            <li style="margin-bottom: 1vmin;"><b>Efficient Algorithms for Data Processing</b><br />
+                                Published in Journal of Computer Science, 2018 Summary: Discussed novel approaches
+                                to data processing algorithms and their efficiencies.        
+                               <button class="remove-education" onclick="removeEducation(this)">Remove</button>
+                            </li>
+
+                            <li><b>Building Scalable Web Applications</b><br />Published in Web Developer Conference Proceedings, 2019
+                                   Summary: Explored techniques and tools for building scalable and high-performance web applications                                                                   
+                               <button class="remove-education" onclick="removeEducation(this)">Remove</button>
+                            </li>
+                        </ul>                     
+                    </div>
+                </div>
+
+                <div class="section" id="sectionProjects">
+                    <div class="section-title ruled rule-above">
+                        <hr class="hrtop">
+                        <h4><strong>Projects</strong></h4>
+                        <hr class="hrbottom">
+                    </div>
+                    <div>
+                        <ul id="projectList">
+                            <li style="margin-bottom: 1vmin;"><b>E-commerce Platform</b><br />
+                                Description: Developed a full-fledged e-commerce platform with shopping cart and payment gateway integration
+                                Technologies Used: React, Node.js, Express, MongoDB Key Features: User authentication, Product search and 
+                                filter, Order management        
+                               <button class="remove-education" onclick="removeEducation(this)">Remove</button>
+                            </li>
+
+                            <li><b>Building Scalable Web Applications</b><br />Published in Web Developer Conference Proceedings, 2019
+                                   Summary: Explored techniques and tools for building scalable and high-performance web applications                                                                   
+                               <button class="remove-education" onclick="removeEducation(this)">Remove</button>
+                            </li>
+                        </ul>
+                        <button onclick="addProject()">Add Project</button>
+                    </div>
+                </div>
+
+                <div class="section" id="sectionTskills">
+                    <div class="section-title ruled rule-above">
+                        <hr class="hrtop">
+                        <h4><strong>Technical skills</strong></h4>
+                        <hr class="hrbottom">
+                    </div>
+                    <div>
+                        <ul id="tskillsList">
+                            <li style="margin-bottom: 1vmin;"><b>E-commerce Platform</b><br />
+                                Programming languages : C++, Python, Java *Web technologies : HTML, CSS, Javascript
+                                Database management : mySQL Miscellaneous : Android programming * 
+                                Operating system : Windows, Linux<br />
+                                <b>              * Elementary proficiency</b>       
+                               <button class="remove-education" onclick="removeEducation(this)">Remove</button>
+                            </li>                            
+                        </ul>
+                        <button onclick="addTskills()">Add Technical skills</button>
+                    </div>
+                </div>
+
+                <div class="section" id="sectionAchievements">
+                    <div class="section-title ruled rule-above">
+                        <hr class="hrtop">
+                        <h4><strong>Achievements</strong></h4>
+                        <hr class="hrbottom">
+                    </div>
+                    <div>
+                        <ul id="achievementList">
+                            <li style="margin-bottom: 1vmin;">
+                                Spearheaded the development of a scalable e-commerce platform that boosted company sales by 30%
+                                within six months. Led a cross-functional team in the successful redesign of a client’s website,
+                                resulting in a 50% increase in user engagement.                                       
+                               <button class="remove-education" onclick="removeEducation(this)">Remove</button>
+                            </li>    
+                        </ul>
+                        <button onclick="addAchievement()">Add Achievement</button>
+                    </div>
+                </div>
+
+                <div class="section" id="sectionKeycourses">
+                    <div class="section-title ruled rule-above">
+                        <hr class="hrtop">
+                        <h4><strong>Key courses taken</strong></h4>
+                        <hr class="hrbottom">
+                    </div>
+                    <div>
+                        <ul id="KeycoursesList">
+                            <li style="margin-bottom: 1vmin;">
+                                Computer lab<br />
+                                Process design<br />
+                                Statistics *<br />
+                                Advanced calculus<br />
+                                XYZ architecture *<br />
+                                ABC lab *<br />
+                                <b>To be completed in DEC 2025 *</b>
+                               <button class="remove-education" onclick="removeEducation(this)">Remove</button>
+                            </li>    
+                        </ul>
+                        <button onclick="addKeycourses()">Add Key Course</button>
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: flex-end; margin-top: 6vmin;" id="sectionDownload"> 
+                    <button style='background-color: rgb(6, 78, 136);' onclick="makeStatic()">PRINT SECTION</button> <!-- New Button -->                   
+                    <button style='background-color: rgb(131, 9, 9); margin-left: .2vmin;' onclick="resetAll()">Reset All</button>                    
+                </div>
+
+            </div>
+            <div id="bott"
+                style="position: relative; margin-top: 1vmin; text-align: center; font-size: 1vmin; line-height: 1.3vmin; background-color: rgb(3, 53, 49); color: rgb(211, 211, 211); text-shadow: 2px 3px #000000; padding: 2px;">
+                MERCHANTSONS INC. COPYRIGHT © 2024 ALL RIGHTS RESERVED<br />
+                LEGAL PAPER SIZE RESUME DESIGN FOR MILESTONE (1 - 4) INTERACTIVE RESUME BUILDER
+            </div>
+        </div>
+        <div class="mode-select">
+            <button class="btntxt" id="indexBtn">ROLAM HOME</button>
+            <button class="btntxt" id="staticBtn">STATIC RESUME</button>
+            <button class="btntxt active" id="dynamicBtn">DYNAMIC RESUME</button>
+        </div>
+    </div>
+</body>
+
+</html>
